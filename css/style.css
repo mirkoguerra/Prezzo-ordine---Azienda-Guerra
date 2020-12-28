@@ -1,0 +1,148 @@
+/* INIZIALIZZAZIONE */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* HELPER */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* GENERALE */
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+/* INPUT */
+section.input.invisible {
+  display: none;
+}
+section.input section.wine-quality .col {
+  height: 85vh;
+  min-height: calc(0.85 * 400px);
+  width: 50vw;
+  float: left;
+}
+section.input section.wine-quality .col > div {
+  height: calc(85vh / 10);
+  min-height: calc((0.85 * 400px) / 10);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section.input section.wine-quality .col > div > span {
+  font-size: 20px;
+  margin-left: 5px;
+}
+section.input section.wine-quality .col > div > input {
+  max-width: 100px;
+  margin-right: 5px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+section.input section.wine-quality .col > div > input:focus {
+  background-color: lightgrey;
+  border: 1px solid lightgrey;
+  outline: none !important;
+
+}
+section.input section.button {
+  height: 15vh;
+  min-height: calc(0.15 * 400px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+section.input section.button a {
+  font-size: 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+section.input section.button a:hover {
+  background-color: lightgrey;
+  border-color: lightgrey;
+  color: black;
+}
+/* OUTPUT */
+section.output {
+  display: none;
+}
+section.output.visible {
+  display: block;
+}
+section.output div.container {
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.output div.container h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 600;
+}
+section.output div.container h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 600;
+}
+section.output div.container p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+section.output div.container p:last-of-type {
+  margin-bottom: 10px;
+}
+/* MEDIA QUERY */
+@media screen and (max-width: 855px) {
+  section.input section.wine-quality .col {
+    width: 100vw;
+  }
+  section.output div.container h1 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 730px) {
+  section.output div.container h1 {
+    font-size: 30px;
+  }
+  section.output div.container h2 {
+    font-size: 20px;
+  }
+  section.output div.container p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.input section.wine-quality .col > div > span {
+    font-size: 16px;
+  }
+  section.input section.button a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.input section.wine-quality .col > div > span {
+    font-size: 14px;
+  }
+  section.input section.button a {
+    font-size: 14px;
+    text-align: center;
+  }
+}
